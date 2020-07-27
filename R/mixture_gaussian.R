@@ -14,8 +14,3 @@
 mixture_gaussian <- function(x, pi_0 = 0.3, mu_1 = -5, mu_2 = 5, sd_1 = 1, sd_2 = 5) {
   ifelse(runif(1) < pi_0, rnorm(1, mu_1, sd_1), rnorm(1, mu_2, sd_2))
 }
-
-N <- 1000
-x <- sapply(1:N, mixture_gaussian)
-plot(density(x))
-
