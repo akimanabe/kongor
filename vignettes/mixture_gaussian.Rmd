@@ -1,0 +1,25 @@
+---
+title: "mixture_gaussian"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{mixture_gaussian}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+devtools::load_all()
+```
+
+```{r}
+N <- 1000
+x <- sapply(1:N, mixture_gaussian)
+plot(density(x))
+```
