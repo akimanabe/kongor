@@ -1,13 +1,11 @@
-mu <- c(-1, -1)
-sigma <- c(1, 2)
-pi <- c(0.5, 0.5)
-# gamma_0 <- c()
-# gamma_1 <- c()
-# n_k <- c()
-
-# log_likelihood_history <- c()
-
-fit_em <- function(mu = c(-1, 1), sigma = c(1, 2), pi = c(0.5, 0.5)) {
+#' Estimate mixture gaussian distribution by EM algorithm
+#'
+#' @param x distribution
+#' @param mu mu as vector of initial mean of each gaussian
+#' @param sigma vector of initial sd of each gaussian
+#' @param pi vector of sum of initial proportion of mixture gaussian
+#' @export
+fit_em <- function(x, mu = c(-1, 1), sigma = c(1, 2), pi = c(0.5, 0.5)) {
 
   gamma_0 <- c()
   gamma_1 <- c()
