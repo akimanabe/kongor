@@ -1,6 +1,6 @@
 #' Generate random number based on mixture gaussian
 #'
-#' @param x
+#' @param x number
 #' @param pi_0 proportion of skewness to gaussian_1. The value must be between 0 <= pi_0 <= 1.
 #' @param mu_1 mean of gaussian_1
 #' @param mu_2 mean of gaussian_2
