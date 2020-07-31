@@ -35,5 +35,8 @@ fit_em <- function(x, mu = c(-1, 1), sigma = c(1, 2), pi = c(0.5, 0.5)) {
       break
     }
   }
+  plot(log_likelihood_history, pch = 1, type = "b", ylab = "log_likelihood")
+
+  list(mu = mu, sigma = sigma, pi = pi)
 
 }

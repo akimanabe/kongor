@@ -18,8 +18,11 @@ knitr::opts_chunk$set(
 devtools::load_all()
 ```
 
-```{r}
+```{r, fig.height = 3, fig.width = 5, fig.align = 'center'}
 N <- 1000
 x <- sapply(1:N, mixture_gaussian)
 plot(density(x))
+```
+```{r, fig.height = 3, fig.width = 5, fig.align = 'center'}
+fit_em(x)
 ```
