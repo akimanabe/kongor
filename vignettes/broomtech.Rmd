@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r, include = FALSE}
-library(tidyverse)
+library(ggplot2)
 library(broom)
 data(iris)
 ```
