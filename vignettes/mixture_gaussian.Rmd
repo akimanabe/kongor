@@ -16,10 +16,22 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 devtools::load_all()
+library(ggplot)
 ```
+
+まずは混合正規分布を作成
 
 ```{r}
 N <- 1000
 x <- sapply(1:N, mixture_gaussian)
 plot(density(x))
+```
+
+
+```{r}
+aji <- readr::read_csv("../aji.csv")
+
+head(aji)
+
+ggplot(aji) + geom_cols(aes(x = Length, y = Freq))
 ```
