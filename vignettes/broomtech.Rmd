@@ -3,6 +3,10 @@ title: "broomtech"
 author: "Aki"
 date: "2020/7/28"
 output: html_document
+vignette: >
+  %\VignetteIndexEntry{mixture_gaussian}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
