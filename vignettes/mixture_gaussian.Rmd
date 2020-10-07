@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 ```{r setup}
 devtools::load_all()
 library(ggplot2)
+library(mixtools)
 ```
 
 まずは混合正規分布を作成
@@ -34,4 +35,10 @@ aji <- readr::read_csv("../aji.csv")
 head(aji)
 
 ggplot(aji) + geom_col(aes(x = Length, y = Freq))
+```
+
+```{r}
+ajilength <- dplyr::pull(aji, Length)
+
+
 ```
