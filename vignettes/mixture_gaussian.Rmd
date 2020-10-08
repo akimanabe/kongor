@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```{r setup}
 devtools::load_all()
 library(ggplot2)
-library(mixtools)
+library(dplyr)
 ```
 
 まずは混合正規分布を作成
