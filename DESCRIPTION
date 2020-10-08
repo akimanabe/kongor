@@ -20,4 +20,6 @@ Imports:
     broom,
     rmarkdown,
     testthat,
-    ggplot2
+    ggplot2,
+    readr,
+    dplyr
