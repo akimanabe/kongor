@@ -5,7 +5,7 @@
 #' @param mu mean size for each age
 #' @param sd sd for each age
 #'
-#' @return tibble with rnum list
+#' @return tibble with length list
 #' @export
 #'
 #' @examples
@@ -25,7 +25,7 @@ create_mixgauss <-
 
     p %>%
       dplyr::select(-age) %>%
-      dplyr::mutate(rnum = purrr::pmap(.,
+      dplyr::mutate(length = purrr::pmap(.,
                                        function(n, mu, sd){
                                          rnorm(n = n,
                                                mean = mu,
@@ -33,5 +33,6 @@ create_mixgauss <-
                                        })) %>%
       dplyr::bind_cols(p %>%
                          dplyr::select(age)) %>%
-      dplyr::select(age, n, mu, sd, rnum)
+      dplyr::select(age, n, mu, sd, length) %>%
+      tidyr::unnest(length)
   }
