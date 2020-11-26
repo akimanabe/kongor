@@ -1,7 +1,7 @@
-context("create_mixgauss")
+context("mixgauss")
 
 test_that("function exists", {
-  expect_is(create_mixgauss, "function")
+  expect_is(mixgauss, "function")
 })
 
 test_that("function works", {
@@ -12,13 +12,13 @@ test_that("function works", {
 
   # tibble column number equals to 5
   expect_equal(
-    create_mixgauss(age, n, mu, sd) %>%
+    mixgauss(age, n, mu, sd) %>%
       ncol(), 5
   )
 
   # generated length counts equals to sum of n
   expect_equal(
-    create_mixgauss(age, n, mu, sd) %>%
+    mixgauss(age, n, mu, sd) %>%
       nrow(),
     sum(n)
   )
@@ -31,7 +31,7 @@ test_that("gaussian mean is adequate", {
   sd  <- c(10, 20, 20)
 
   expect_equal(
-    create_mixgauss(age, n, mu, sd) %>%
+    mixgauss(age, n, mu, sd) %>%
       dplyr::filter(age == 1) %>%
       dplyr::pull(length) %>%
       mean(),
@@ -39,7 +39,7 @@ test_that("gaussian mean is adequate", {
     tolerance = 1
   )
   expect_equal(
-    create_mixgauss(age, n, mu, sd) %>%
+    mixgauss(age, n, mu, sd) %>%
       dplyr::filter(age == 2) %>%
       dplyr::pull(length) %>%
       mean(),
@@ -47,7 +47,7 @@ test_that("gaussian mean is adequate", {
     tolerance = 1
   )
   expect_equal(
-    create_mixgauss(age, n, mu, sd) %>%
+    mixgauss(age, n, mu, sd) %>%
       dplyr::filter(age == 3) %>%
       dplyr::pull(length) %>%
       mean(),

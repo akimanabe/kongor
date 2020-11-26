@@ -7,16 +7,7 @@
 #'
 #' @return tibble with length list
 #' @export
-#'
-#' @examples
-#' \dontrun{
-#' age <- c(1, 2)
-#' n   <- c(10, 10)
-#' mu  <- c(30, 50)
-#' sd  <- c(3, 5)
-#' create_mixgauss(age = age, n = n, mu = mu, sd = sd)
-#' }
-create_mixgauss <-
+mixgauss <-
   function(age, n, mu, sd){
     p <- tibble::tibble(age = age,
                         n = n,
