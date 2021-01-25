@@ -3,3 +3,5 @@
 language: R
 warnings_are_errors: false
 cache: packages
+before_install:
+  - sudo apt install libgit2-dev
