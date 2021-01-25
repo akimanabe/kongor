@@ -2,4 +2,5 @@
 
 export(fit_em)
 export(log_likelihood)
+export(mixgauss)
 export(mixture_gaussian)

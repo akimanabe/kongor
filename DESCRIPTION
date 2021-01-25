@@ -22,4 +22,6 @@ Imports:
     testthat,
     ggplot2,
     readr,
-    dplyr
+    dplyr,
+    tidyr,
+    tibble
