@@ -1,4 +1,4 @@
-FROM rocker/verse:4.0.0-ubuntu18.04
+FROM rocker/rstudio:3.6.3
 
 COPY . /kongor
 
@@ -35,5 +35,5 @@ RUN apt-get -y update -qq \
     devtools \
     BiocManager\
     && R -e "devtools::install_dev_deps('/kongor', dep = TRUE)"
-    
-    WORKDIR /kongor
+
+WORKDIR /kongor
