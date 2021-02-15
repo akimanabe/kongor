@@ -8,9 +8,9 @@
 #' @examples
 freq_length <-
   function(dat) {
-    assertthat::assert_that(
-      is.vector(dat),
-      msg = "Input data is a vector with length data or count data")
+    # assertthat::assert_that(
+    #   is.vector(dat),
+    #   msg = "Input data is a vector with length data or count data")
 
     dat %>%
       tibble::tibble(length = .) %>%
